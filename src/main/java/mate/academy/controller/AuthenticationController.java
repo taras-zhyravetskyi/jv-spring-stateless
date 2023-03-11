@@ -37,7 +37,7 @@ public class AuthenticationController {
         return userMapper.mapToDto(user);
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ResponseEntity<Object> login(@RequestBody @Valid UserLoginDto userLoginDto)
             throws AuthenticationException {
         User user = authenticationService.login(
